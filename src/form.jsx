@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Apps from "./table"
 
 export function Forms() {
   
@@ -10,14 +11,13 @@ export function Forms() {
     return(
         <div>
          
-        name :  <input type="text" placeholder="Name"  value={name}  onChange={(e)=> setname(e.target.value)}/>
-        Phone Number :<input type="text" placeholder="Phone No" />
-        Email :  <input type="text" placeholder="Email" />
-        Dog Breed :  <input type="text" placeholder="Dog Breed" />
+        name :  <input type="text" placeholder="Name"   value={setname(name)} name={name}/>
+        Phone Number :<input type="text" placeholder="Phone No"  value={setnumber(number)} number={number} />
+        Email :  <input type="text" placeholder="Email" value={setemail(email)} email={email}/>
+        Dog Breed :  <input type="text" placeholder="Dog Breed"  value={setbreed(breed)} breed={breed}/>
         
         </div>
     )
 
 }
-
 export default Forms;

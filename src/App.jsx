@@ -1,19 +1,35 @@
-import Header from "./header"
-import Forms from "./form"
-import Table from "./table"
 
 
-function App() {
- 
+import React from "react"
 
-  return (
+const Parent = () => {
+
+  return(
     <div>
-      <Header/>
-     <Forms/>
-     <Table/>
+      <Greetings name="laptop for rohan" age={2684394884489438}/>
     </div>
-      
   )
 }
 
-export default App
+const App = () => {
+  return(
+    <div>
+      <Parent/>
+      
+    </div>
+  )
+}
+
+
+const Greetings = ({name ,age}) => {
+
+
+  return(
+    <div>
+     <p>{name} </p> 
+      {age}
+    </div>
+  )
+}
+
+export default App;
